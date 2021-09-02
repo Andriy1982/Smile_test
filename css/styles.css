@@ -1,0 +1,218 @@
+@font-face {
+    font-family: 'Marvel';
+    src: url('/fonts/Marvel-Regular.eot');
+    src: local('Marvel'), local('Marvel-Regular'),
+        url('/fonts/Marvel-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Marvel-Regular.woff2') format('woff2'),
+        url('/fonts/Marvel-Regular.woff') format('woff'),
+        url('/fonts/Marvel-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Marvel';
+    src: url('/fonts/Marvel-Italic.eot');
+    src: local('Marvel Italic'), local('Marvel-Italic'),
+        url('/fonts/Marvel-Italic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Marvel-Italic.woff2') format('woff2'),
+        url('/fonts/Marvel-Italic.woff') format('woff'),
+        url('/fonts/Marvel-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Marvel';
+    src: url('/fonts/Marvel-BoldItalic.eot');
+    src: local('Marvel Bold Italic'), local('Marvel-BoldItalic'),
+        url('/fonts/Marvel-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Marvel-BoldItalic.woff2') format('woff2'),
+        url('/fonts/Marvel-BoldItalic.woff') format('woff'),
+        url('/fonts/Marvel-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Marvel';
+    src: url('/fonts/Marvel-Bold.eot');
+    src: local('Marvel Bold'), local('Marvel-Bold'),
+        url('/fonts/Marvel-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Marvel-Bold.woff2') format('woff2'),
+        url('/fonts/Marvel-Bold.woff') format('woff'),
+        url('/fonts/Marvel-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family:'Marvel', sans-serif;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+p,
+h6 {
+    margin: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* 
+.main {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 0 10px; 
+} */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+    /* min-width: 320px; */
+    width: 320px;
+    padding: 40px 15px 78px; 
+    /* background-color:tomato;  */
+    margin: 0 auto;
+
+    /* height: 580px; */
+}
+
+.title {
+    font-size: 18px;
+    line-height: 32px;
+    color: #333333;
+    margin-bottom: 34px;
+}
+
+.title span {
+    font-size: 12px;
+    line-height: 24px;
+    color: #ff3333;
+}
+
+.list-links {
+    display: block;
+}
+
+.list-links__item {
+    display: block;
+}
+
+.list-links__link {
+    font-size: 24px;
+    line-height: 30px;
+    color: #333333;
+    text-decoration: none;
+    border-bottom: 1px solid #e1e1e1;
+}
+/* 
+.list-links__link:hover {
+    color: #000000;
+    border-bottom: none;
+} */
+
+.list-links__link:active {
+    color: red;
+    border-bottom: none;
+}
+
+.list-links__link:visited {
+    color: #666666;
+    /* border-bottom: none; */
+}
+
+
+.container__background {
+    min-height: 300px;
+    background-image: url(/images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-bottom: 14px solid #5cc0ff;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 14px solid #5cc0ff;
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    background-color: #dde1e2;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #81878b;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.content span {
+    display: block;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+.content p {
+    text-transform: uppercase;
+}
+
+
+.text__wrap {
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.btn {
+    width: 180px;
+    height: 58px;
+    background-color: #2589cc;
+    border: none;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.isActive {
+    background-color: #008000;
+}
