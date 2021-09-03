@@ -26,6 +26,64 @@
                     <a class="list-links__link" href="#">Visited link</a>
                 </li>
             </ul>
+            <div class="input-file-wrap">
+                <input  class="input-file visually-hidden" type="file" id="upload-1" name="file" accept=".jpg, .jpeg, .png, .gif, .bmp">
+                <label class="label-file" for="upload-1">No selected element</label>
+                <input  class="input-file visually-hidden" type="file" id="upload-2">
+                <label class="label-file" for="upload-2">No selected element</label>
+            </div>
+            <div class="select-wrapper">
+                <div class="select">
+                    <div class="select__trigger"><span>Tesla</span>
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="custom-options">
+                        <span class="custom-option selected" data-value="tesla">Tesla</span>
+                        <span class="custom-option" data-value="volvo">Volvo</span>
+                        <span class="custom-option" data-value="mercedes">Mercedes</span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-input-wrap">
+                <input  class="text-input" type="text" placeholder="Input">
+                <input  class="text-input" type="text" placeholder="Input">
+            </div>
+            <div class="checkbox-wrap">
+                <ul class="list-checkbox">
+                    <li class="list-checkbox__item">
+                        <input  class="list-checkbox__check visually-hidden" type="checkbox" name="item-size" value="first" id="size-1">
+                        <label class="list-checkbox__label" for="size-1">Default</label>
+                    </li>
+                    <li class="list-checkbox__item">
+                        <input  class="list-checkbox__check visually-hidden" type="checkbox" name="item-size" value="first" id="size-2">
+                        <label class="list-checkbox__label" for="size-2">Checked</label>
+                    </li>
+                    <li class="list-checkbox__item">
+                        <input  class="list-checkbox__check visually-hidden" type="checkbox" name="item-size" value="first" id="size-3" disabled>
+                        <label class="list-checkbox__label" for="size-3">Disabled</label>
+                    </li>
+                </ul>
+                <ul class="list-radio">
+                    <li class="list-checkbox__item">
+                        <input  class="list-radio__input visually-hidden" type="radio" name="item-number" value="first" id="number-1">
+                        <label class="list-radio__label" for="number-1">Default</label>
+                    </li>
+                    <li class="list-radio__item">
+                        <input  class="list-radio__input visually-hidden" type="radio" name="item-number" value="first" id="number-2">
+                        <label class="list-radio__label" for="number-2">Checked</label>
+                    </li>
+                    <li class="list-radio__item">
+                        <input  class="list-radio__input visually-hidden" type="radio" name="item-number" value="first" id="number-3" disabled>
+                        <label class="list-radio__label" for="number-3">Disabled</label>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="button-wrap">
+                <button class="button">send</button>
+                <button class="button isActive">send</button>
+            </div>
 
             <!-- <div class="container__background"></div>
             <img class="avatar" src="./images/avatar.jpg" alt="Avatar">
@@ -38,6 +96,6 @@
             </div> -->
         </div>
     </main>
-    <!-- <script src="./index.js" type="module"></script> -->
+    <script src="./index.js" type="module"></script>
 </body>
 </html>
