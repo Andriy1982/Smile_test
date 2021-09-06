@@ -60,13 +60,6 @@ body {
     font-family:'Marvel', sans-serif;
 }
 
-img{
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-p,
 h6 {
     margin: 0;
 }
@@ -91,28 +84,16 @@ ol {
             clip-path: inset(50%);
     margin: -1px;
   }
-/* 
-.main {
-    width: 100%;
-    height: 100vh;
-    margin: 0 auto;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; 
-    padding: 0 10px; 
-} */
 
-.container {
-    display: flex;
-    flex-direction: column;
-    /* position: relative; */
-    /* min-width: 320px; */
+.container {  
     width: 320px;
     padding: 40px 15px 78px; 
-    /* background-color:tomato;  */
     margin: 0 auto;
+}
 
-    /* height: 580px; */
+.content-wrap {
+    display: flex;
+    flex-direction: column;
 }
 
 .title {
@@ -128,40 +109,42 @@ ol {
     color: #ff3333;
 }
 
-.list-links {
-    display: block;
-}
-
-.list-links__item {
-    display: block;
-}
+/* LINKS */
 
 .list-links__link {
     font-size: 24px;
     line-height: 30px;
     color: #333333;
     text-decoration: none;
-    border-bottom: 1px solid #e1e1e1;
+    border-bottom: 1px solid #c0c0c0;
 }
-/* 
+
+.list-links__link--hover {
+    display: none;
+}
+
 .list-links__link:hover {
+    background-color: #e1e1e1;
     color: #000000;
-    border-bottom: none;
-} */
+    border-bottom-color: transparent;
+}
 
 .list-links__link:active {
-    color: red;
+    background-color: transparent;
+    color: #000000;
     border-bottom: none;
 }
 
-.list-links__link:visited {
+.list-links__link--visit:visited {
     color: #666666;
-    /* border-bottom: none; */
+    border-bottom: none; 
 }
 .input-file-wrap {
     display: flex;
     flex-direction: column;
 }
+
+/* INPUT TYPE FILE */
 
 .label-file {
     display: flex;
@@ -201,7 +184,6 @@ ol {
     position: relative;
     display: flex;
     flex-direction: column;
-    /* border-bottom: 2px solid #363636; */
 }
 
 .select__trigger {
@@ -209,34 +191,22 @@ ol {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* padding: 0 22px; */
     font-size: 24px;
     font-weight: bold;
     color: #333333;
-    /* height: 60px; */
     line-height: 36px;
-    /* background: #ffffff; */
     cursor: pointer;
     border-bottom: 2px solid #363636;
     padding: 28px 0 6px;
 }
 
 .custom-options {
-    /* position: absolute; */
-    display: block;
-    top: 100%;
-    left: 0;
-    right: 0;
-    /* border: 2px solid #394a6d; */
-    border-top: 0;
-    /* background: #fff; */
-    /* transition: all 0.5s; */
-    opacity: 0;
+     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    z-index: 2;
     height: 0;
 }
+
 .select.open .custom-options {
     opacity: 1;
     visibility: visible;
@@ -269,7 +239,6 @@ ol {
 }
 
 .arrow {
-    /* position: relative; */
     height: 12px;
     width: 12px;
     background-image: url(../icons/plus.svg);
@@ -282,7 +251,8 @@ ol {
 .open .arrow {
     transform: rotate(-45deg);
 }
-/* SELECT */
+
+/* TEXT INPUT */
 
 .text-input-wrap {
     display: flex;
@@ -303,10 +273,16 @@ ol {
     color: #999999;
 }
 
+/* CHECKBOX INPUT */
+
 .checkbox-wrap {
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
+}
+
+.onTablet {
+    display: none;
 }
 
 .list-checkbox__label,
@@ -349,11 +325,12 @@ ol {
     border: 7px solid #22f8b9;
 }
 
+/* BUTTONS */
+
 .button-wrap {
     display: flex;
     flex-direction: column;
 }
-
 
 .button {
     display: block;
@@ -397,69 +374,87 @@ ol {
     background-color: rgba(0, 0, 255, 0.5) ;
 }
 
-.container__background {
-    min-height: 300px;
-    background-image: url(/images/background.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-bottom: 14px solid #5cc0ff;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-}
+/* MEDIA */
 
-.avatar {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    border: 14px solid #5cc0ff;
-    object-fit: cover;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
+@media screen and ( min-width: 768px) { 
 
-.content {
-    background-color: #dde1e2;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    color: #81878b;
-    font-weight: 500;
-    font-size: 24px;
-}
+    .container {
+        width: 724px;
+        padding-left: 0;
+        padding-right: 0;
+    }
 
-.content span {
-    display: block;
-    text-align: center;
-    margin-bottom: 2px;
-}
+    .content-wrap {
+        display: grid;
+        grid-template-columns: 310px 310px;
+        grid-column-gap: 62px;
+        grid-template-rows: auto auto 1fr;
+         padding-left: 40px;
+    }
 
-.content p {
-    text-transform: uppercase;
-}
+    .title {
+        margin-bottom: 40px;
+    }
 
+    .list-links__link--hover {
+        display: inline-block;
+    }
 
-.text__wrap {
-    padding-top: 80px;
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 40px;
-}
+    .checkbox-wrap {
+        padding: 0;
+    }
 
-.btn {
-    width: 180px;
-    height: 58px;
-    background-color: #2589cc;
-    border: none;
-    border-radius: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    color: #ffffff;
-    text-transform: uppercase;
-    font-size: 24px;
-    cursor: pointer;
-}
+    .onMobile {
+       display: none; 
+    }
+
+    .onTablet {
+        display: flex;
+    }
+
+    .text-input-wrap {
+        margin-bottom: 30px;
+    }
+
+    .button-wrap {
+        flex-direction: row;
+    }
+
+    .button {
+        width: 132px;
+    }
+    .button:first-child {
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+ }
+
+ @media screen and ( min-width: 1200px) {
+     
+    .container {
+        width: 960px;
+        padding-top: 130px;     
+     }
+
+    .content-wrap {
+        grid-column-gap: 20px;
+        grid-template-columns: 380px 380px;
+        padding: 0;
+    }
+
+    .list-links {
+        padding-left: 30px;
+    }
+
+    .checkbox-wrap {
+        padding-left: 70px;
+        padding-right: 20px;
+    }
+
+    .input-file-wrap,
+    .select-wrapper,
+    .wrapper {
+        padding-left: 30px;
+        padding-right: 50px;
+    }
+ }

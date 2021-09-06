@@ -12,43 +12,22 @@
     <main class="main">
         <div class="container">
             <h6 class="title"><span>h6:</span> Links and form elements</h6>
+            <div class="content-wrap">
             <ul class="list-links">
                 <li class="list-links__item">
-                    <a class="list-links__link" href="">Default link</a>
+                    <a class="list-links__link" href="#">Default link</a>
                 </li>
                 <li class="list-links__item">
-                    <a class="list-links__link list-links__link--hover" href="#">Default link</a>
+                    <a class="list-links__link list-links__link--hover" href="#">Hovered link</a>
                 </li>
                 <li class="list-links__item">
                     <a class="list-links__link" href="# ">Active link</a>
                 </li>
                 <li class="list-links__item">
-                    <a class="list-links__link" href="#">Visited link</a>
+                    <a class="list-links__link list-links__link--visit" href="#">Visited link</a>
                 </li>
             </ul>
-            <div class="input-file-wrap">
-                <input  class="input-file visually-hidden" type="file" id="upload-1" name="file" accept=".jpg, .jpeg, .png, .gif, .bmp">
-                <label class="label-file" for="upload-1">No selected element</label>
-                <input  class="input-file visually-hidden" type="file" id="upload-2">
-                <label class="label-file" for="upload-2">No selected element</label>
-            </div>
-            <div class="select-wrapper">
-                <div class="select">
-                    <div class="select__trigger"><span>Tesla</span>
-                        <div class="arrow"></div>
-                    </div>
-                    <div class="custom-options">
-                        <span class="custom-option selected" data-value="tesla">Tesla</span>
-                        <span class="custom-option" data-value="volvo">Volvo</span>
-                        <span class="custom-option" data-value="mercedes">Mercedes</span>
-                    </div>
-                </div>
-            </div>
-            <div class="text-input-wrap">
-                <input  class="text-input" type="text" placeholder="Input">
-                <input  class="text-input" type="text" placeholder="Input">
-            </div>
-            <div class="checkbox-wrap">
+            <div class="checkbox-wrap onTablet">
                 <ul class="list-checkbox">
                     <li class="list-checkbox__item">
                         <input  class="list-checkbox__check visually-hidden" type="checkbox" name="item-size" value="first" id="size-1">
@@ -79,21 +58,68 @@
                 </ul>
 
             </div>
+            <div class="input-file-wrap">
+                <input  class="input-file visually-hidden" type="file" id="upload-1" name="file" accept=".jpg, .jpeg, .png, .gif, .bmp">
+                <label class="label-file" for="upload-1">No selected element</label>
+            </div>
+            <div class="input-file-wrap">
+                <input  class="input-file visually-hidden" type="file" id="upload-2">
+                <label class="label-file" for="upload-2">No selected element</label>
+            </div>
+            <div class="select-wrapper">
+                <div class="select">
+                    <div class="select__trigger"><span>Tesla</span>
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="custom-options">
+                        <span class="custom-option selected" data-value="tesla">Tesla</span>
+                        <span class="custom-option" data-value="volvo">Volvo</span>
+                        <span class="custom-option" data-value="mercedes">Mercedes</span>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper">
+            <div class="text-input-wrap">
+                <input  class="text-input" type="text" placeholder="Input">
+                <input  class="text-input" type="text" placeholder="Input">
+            </div>
+            <div class="checkbox-wrap onMobile">
+                <ul class="list-checkbox">
+                    <li class="list-checkbox__item">
+                        <input  class="list-checkbox__check visually-hidden" type="checkbox" name="item-size" value="first" id="size-4">
+                        <label class="list-checkbox__label" for="size-4">Default</label>
+                    </li>
+                    <li class="list-checkbox__item">
+                        <input  class="list-checkbox__check visually-hidden" type="checkbox" name="item-size" value="first" id="size-5">
+                        <label class="list-checkbox__label" for="size-5">Checked</label>
+                    </li>
+                    <li class="list-checkbox__item">
+                        <input  class="list-checkbox__check visually-hidden" type="checkbox" name="item-size" value="first" id="size-6" disabled>
+                        <label class="list-checkbox__label" for="size-6">Disabled</label>
+                    </li>
+                </ul>
+                <ul class="list-radio">
+                    <li class="list-checkbox__item">
+                        <input  class="list-radio__input visually-hidden" type="radio" name="item-number" value="first" id="number-4">
+                        <label class="list-radio__label" for="number-4">Default</label>
+                    </li>
+                    <li class="list-radio__item">
+                        <input  class="list-radio__input visually-hidden" type="radio" name="item-number" value="first" id="number-5">
+                        <label class="list-radio__label" for="number-5">Checked</label>
+                    </li>
+                    <li class="list-radio__item">
+                        <input  class="list-radio__input visually-hidden" type="radio" name="item-number" value="first" id="number-6" disabled>
+                        <label class="list-radio__label" for="number-6">Disabled</label>
+                    </li>
+                </ul>
 
+            </div>
             <div class="button-wrap">
                 <button class="button">send</button>
                 <button class="button isActive">send</button>
             </div>
-
-            <!-- <div class="container__background"></div>
-            <img class="avatar" src="./images/avatar.jpg" alt="Avatar">
-            <div class="content">
-                <div class="text__wrap">
-                    <p><span>777</span>Tweets</p>
-                    <p><span class="span-js">100,555,555</span>Followers</p>
-                </div>
-                <button class="btn btn-js" type="button">Follow</button>
-            </div> -->
+        </div>
+        </div>
         </div>
     </main>
     <script src="./index.js" type="module"></script>
